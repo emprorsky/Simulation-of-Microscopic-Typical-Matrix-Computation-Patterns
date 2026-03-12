@@ -31,9 +31,9 @@
 ---
 
 
-##Ⅰ.SimNPU
+## Ⅰ.SimNPU
 
-###项目简介###
+### 项目简介 ###
 
 <p>1. 摘要：这是一种基于微观典型矩阵计算模式的矩阵计算仿真算法。
 
@@ -76,7 +76,7 @@
 
 ![alt text](SimNPU/image-2.png)
 
-###代码文件说明###
+### 代码文件说明 ###
 
 - test\_new\_matmul\_threemode.py: 测试执行入口。支持多进程并行测试多个矩阵形状（MNK），并输出 Roofline 估算与实际仿真搜索后的性能数据。
     + 分三种模式（各一个分支）：
@@ -97,7 +97,7 @@
 - operators.py: 算子基类定义。定义了所有算子的通用基类 Operator，并实现了基础的张量变换算子，如 Reshape（形状变换）、Concat（张量拼接）和 Transpose（维度转置），用于构建计算图。
 - utils.py: 基础工具库。定义了 Tensor 类和 DataType（如 fp16, int8）等基础数据结构，并提供了计算张量大小、查找约数等辅助函数。
 
-###数据与配置文件说明###
+### 数据与配置文件说明 ###
 
 1. 性能效率曲线 (CSV 文件)
 这些文件用于 new\_matmul\_threemode.py 中的仿真逻辑，通过查找不同数据量（Traffic Size）对应的效率因子，使仿真结果更贴近真实硬件表现：
@@ -113,7 +113,7 @@
 3. 硬件规格 (JSON 文件)
  + npu\_910B1.json: 包含了昇腾 NPU (910B1) 的详细硬件参数定义（如频率、带宽、各级存储容量等），可供仿真器加载或作为硬件配置参考。
 
-###测试执行模式###
+### 测试执行模式 ###
 
 `python test\_new\_matmul\_threemode.py --mode fast`
 
@@ -121,7 +121,7 @@
 
 `python test\_new\_matmul\_threemode.py --mode exhaustive`
 
-###环境依赖###
+### 环境依赖 ###
 
 Python 3.9+
 
@@ -129,7 +129,7 @@ Python 3.9+
 
 ---
 
-##Ⅱ. AutoTuner-for-Ascend-GEMM
+## Ⅱ. AutoTuner-for-Ascend-GEMM
 
 本子模块隶属于 `Simulation-of-Microscopic-Typical-Matrix-Computation-Patterns` (微观典型矩阵计算模式仿真) 大仓库，专注于**昇腾 (Ascend) 算子底层的自动化调优工作**。
 
