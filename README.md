@@ -87,9 +87,9 @@
 
     + 使用方法
 ```bash
-python test\_new\_matmul\_threemode.py --mode fast
-python test\_new\_matmul\_threemode.py --mode bayes --n\_calls 100
-python test\_new\_matmul\_threemode.py --mode exhaustive
+python test_new_matmul_threemode.py --mode fast
+python test_new_matmul_threemode.py --mode bayes --n\_calls 100
+python test_new_matmul_threemode.py --mode exhaustive
 ```
 - hardware.py: 硬件规格配置。定义了 AI Core 的核心数、时钟频率、各级存储（L1, L2, L0, UB 等）的容量、最小访问粒度以及各级路径的理论带宽和模拟效率曲线。它是整个仿真系统的硬件基础。
 - modules.py: 底层仿真模块。实现了计算模块（ComputeModule）、IO 传输模块（IOModule）和缓存管理模块（L2CacheManager）。通过线性插值等方式模拟实际硬件在不同负载下的效率表现。
