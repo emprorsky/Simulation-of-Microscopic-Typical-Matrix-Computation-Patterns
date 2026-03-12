@@ -1,0 +1,5 @@
+core_num,traffic_size(KB),bandwidth(GB/s),efficiency
+0,0,0,0.3
+0,1024,0,0.6
+0,10240,0,0.75
+0,102400,0,0.9

@@ -1,0 +1,19 @@
+{
+  "matrix_size": 4096,
+  "best_params": {
+    "tile_m": 64,
+    "tile_n": 64,
+    "l1_k": 256,
+    "l0_k": 256,
+    "enable_unit": 1,
+    "enable_shuffle_k": 0,
+    "enable_abba": 0,
+    "swizzle_offset": 4,
+    "swizzle_direction": 1
+  },
+  "best_gflops": 350689.0,
+  "best_tflops": 350.689,
+  "efficiency_percent": 99.62755681818183,
+  "total_evaluations": 45,
+  "successful_evaluations": 34
+}
