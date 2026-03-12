@@ -1,4 +1,4 @@
-###项目简介###
+### 项目简介 ###
 1. 摘要：这是一种基于微观典型矩阵计算模式的矩阵计算仿真算法。
 
 2. 背景：大规模矩阵乘法是高性能计算与人工智能领域的核心计算内核，其效率直接决定大模型训练等应用的性能上限。专用 AI 加速器理论峰值算力虽高，但受“内存墙”影响，实测效率与理论值差距显著，传统静态优化策略难以适配复杂场景。通过构建硬件性能仿真模型，可在软件层面优化矩阵运算的计算与数据调度策略，充分释放昇腾等处理器的硬件潜能。
@@ -49,7 +49,7 @@ operators.py: 算子基类定义。定义了所有算子的通用基类 Operator
 utils.py: 基础工具库。定义了 Tensor 类和 DataType（如 fp16, int8）等基础数据结构，并提供了计算张量大小、查找约数等辅助函数。
 
 
-###数据与配置文件说明###
+### 数据与配置文件说明 ###
 1. 性能效率曲线 (CSV 文件)
 
 这些文件用于 new_matmul_threemode.py 中的仿真逻辑，通过查找不同数据量（Traffic Size）对应的效率因子，使仿真结果更贴近真实硬件表现：
@@ -75,13 +75,13 @@ l12L0B_efficiency.csv: 模拟数据从 L1 缓存搬运到计算单元 L0B 缓冲
 npu_910B1.json: 包含了昇腾 NPU (910B1) 的详细硬件参数定义（如频率、带宽、各级存储容量等），可供仿真器加载或作为硬件配置参考。
 
 
-###测试执行模式###
+### 测试执行模式 ###
 python test_new_matmul_threemode.py --mode fast
 python test_new_matmul_threemode.py --mode bayes --n_calls 100
 python test_new_matmul_threemode.py --mode exhaustive
 
 
-###环境依赖###
+### 环境依赖 ###
 Python 3.9+
 其它见requirements.txt
 
