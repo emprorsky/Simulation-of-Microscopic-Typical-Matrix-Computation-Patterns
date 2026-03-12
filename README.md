@@ -72,6 +72,7 @@
     + FixPipe 主要涉及输出写回路径，耗时相对较短，对整体延迟影响有限，因此在模型中进行简化，仅保留关键写回成本，避免引入过多细节影响仿真效率。
 
 <p>4. 结果
+
 ![alt text](SimNPU/image-3.png)
 
 ![alt text](SimNPU/image-2.png)
@@ -84,8 +85,8 @@
 一种是exhaustive,穷举16-16000（但是各维度L1 tile上限改成小于该维度（M/N/K的原始值）的16的倍数的最大值）；
 一种是bayes,16-16000的m,k,n的L1级分块使用贝叶斯（n\_calls默认为80）（但是各维度L1 tile上限改成小于该维度（M/N/K的原始值）的16的倍数的最大值）
 
-    + 使用方法 
-`python test\_new\_matmul\_threemode.py --mode fast`
+    + 使用方法
+   `python test\_new\_matmul\_threemode.py --mode fast`
 
    `python test\_new\_matmul\_threemode.py --mode bayes --n\_calls 100`
 
